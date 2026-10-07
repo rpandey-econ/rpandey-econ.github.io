@@ -4,11 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rakesh Pandey</title>
-  <meta name="description" content="Your Name, economist.">
+  <meta name="description" content="Rakesh Pandey, economist.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- Overrides: Aptos font + text aligned with top of photo -->
+  <style>
+    body, body * {
+      font-family: Aptos, "Segoe UI", Inter, system-ui, -apple-system, sans-serif !important;
+    }
+    .intro {
+      display: flex;
+      align-items: flex-start;   /* photo and text start at the same height */
+      gap: 36px;
+    }
+    .intro .photo { margin-top: 0; flex-shrink: 0; }
+    .intro > div > :first-child { margin-top: 0 !important; }  /* removes the gap above "About" */
+    .intro h2 { line-height: 1; }
+    @media (max-width: 640px) {
+      .intro { flex-direction: column; }
+    }
+  </style>
 </head>
 <body>
   <div class="page">
@@ -24,20 +42,14 @@
 
     <main>
       <section class="intro">
-        <!-- Add photo.jpg to this folder; it is shown in greyscale -->
-        <img class="photo" src="photo.jpg" alt="Your Name" onerror="this.parentNode.classList.add('no-photo');this.remove()">
+        <img class="photo" src="photo.jpg" alt="Rakesh Pandey" onerror="this.parentNode.classList.add('no-photo');this.remove()">
         <div>
-
-    
-
           <h2>About</h2>
           <p>I use applied microeconomic methods to study questions in development economics and political economy of development. I hold a PhD in Policy Analysis from the RAND School of Public Policy.</p>
 
-</p>My current research examines how early-childhood exposure to drought shapes social-emotional learning outcomes later in life, the economic and environmental effects of the Belt and Road Initiative, and how a state-level alcohol prohibition changes household behavior.</p>
+          <p>My current research examines how early-childhood exposure to drought shapes social-emotional learning outcomes later in life, the economic and environmental effects of the Belt and Road Initiative, and how a state-level alcohol prohibition changes household behavior.</p>
 
-</p>During my doctoral studies, I was an Assistant Policy Researcher at the RAND Corporation. I have also worked as a Research Manager at J-PAL, where I managed multiple randomized controlled trials on mental health, labor markets, and political economy. </p>
-
-          
+          <p>During my doctoral studies, I was an Assistant Policy Researcher at the RAND Corporation. I have also worked as a Research Manager at J-PAL, where I managed multiple randomized controlled trials on mental health, labor markets, and political economy.</p>
         </div>
       </section>
     </main>
